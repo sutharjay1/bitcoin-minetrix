@@ -48,7 +48,7 @@ const NavBar = () => {
   const [expandedMenu, setExpandedMenu] = useState(null);
 
   const menuOptions = [
-    { title: "Stake to mine", path: "#dashboard" },
+    { title: "Stake to mine", path: "/dashboard" },
     {
       title: "About",
       path: "#about",
