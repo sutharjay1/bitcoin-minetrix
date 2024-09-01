@@ -4,6 +4,7 @@ import NavBar from "./components/NavBar";
 import Home from "./page/Home";
 import Footer from "./components/Footer";
 import Dashboard from "./page/Dashboard";
+import Help from "./page/Help";
 
 const App = () => {
   return (
@@ -26,9 +27,7 @@ export const AppRouter = () => {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/dashboard" element={<Dashboard />} />
-      {/* <Route path="/projects" element={<Projects />} />
-      <Route path="/services" element={<Services />} />
-      <Route path="/contact" element={<Contact />} /> */}
+      <Route path="/help" element={<Help />} />
     </Routes>
   );
 };

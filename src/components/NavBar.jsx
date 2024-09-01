@@ -60,7 +60,7 @@ const NavBar = () => {
       ],
     },
     { title: "Minedrop", path: "#minedrop" },
-    { title: "Help", path: "#help" },
+    { title: "Help", path: "/help" },
   ];
 
   useEffect(() => {

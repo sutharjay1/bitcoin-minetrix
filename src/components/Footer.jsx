@@ -7,6 +7,7 @@ import { BsTwitterX } from "react-icons/bs";
 import { FaTelegram } from "react-icons/fa";
 import { PiDiscordLogo } from "react-icons/pi";
 
+
 const link = [
   { name: "Stake to Mine", href: "/stake-to-mine" },
   { name: "What is it", href: "/what-is-it" },
@@ -103,6 +104,8 @@ const Footer = () => {
           ))}
         </div>
       </div>
+
+      
     </div>
   );
 };

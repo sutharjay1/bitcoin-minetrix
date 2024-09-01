@@ -162,52 +162,27 @@ const Home = () => {
   return (
     <>
       <div className="relative  w-full bg-white bg-gradient-to-t from-transparent to-blue-200/35">
-        <div className="w-full">
-          <div className=" absolute top-24 -ml-[42rem]   w-[100vw]">
-            <Marquee
-              cloud={true}
-              className="w-full "
-              repeat={1}
-              reverse={true}
-              cloudDuration={1.5}
-            >
-              <img src="/cloud.svg" alt="cloud" className="w-64  h-auto" />
-            </Marquee>
-          </div>
-          <div className=" absolute top-52  -ml-[29rem] w-[100vw]">
-            <Marquee
-              cloud={true}
-              className="w-full "
-              repeat={1}
-              reverse={true}
-              cloudDuration={1.5}
-            >
-              <img src="/cloud.svg" alt="cloud" className="w-28  h-auto" />
-            </Marquee>
-          </div>
-          <div className=" absolute top-36 -ml-[12rem]  w-[100vw]">
-            <Marquee
-              cloud={true}
-              className="w-full "
-              repeat={1}
-              reverse={true}
-              cloudDuration={1.5}
-            >
-              <img src="/cloud.svg" alt="cloud" className="w-48  h-auto" />
-            </Marquee>
-          </div>
-          <div className=" absolute top-20 -ml-[64rem]  w-[100vw]">
-            <Marquee
-              cloud={true}
-              className="w-full "
-              repeat={1}
-              reverse={true}
-              cloudDuration={1.5}
-            >
-              <img src="/cloud.svg" alt="cloud" className="w-48  h-auto" />
-            </Marquee>
-          </div>
+        <div className="w-full z-40">
+          {[
+            "top-24 -ml-[42rem]",
+            "top-52 -ml-[29rem]",
+            "top-36 -ml-[12rem]",
+            "top-20 -ml-[64rem]",
+          ].map((pos, idx) => (
+            <div key={idx} className={`absolute ${pos} w-[100vw]`}>
+              <Marquee
+                cloud={true}
+                className="w-full"
+                repeat={1}
+                reverse={true}
+                cloudDuration={1.5}
+              >
+                <img src="/cloud.svg" alt="cloud" className="w-48 h-auto" />
+              </Marquee>
+            </div>
+          ))}
         </div>
+
         <MaxWidthWrapper className="max-w-8xl bg-transparent font-poppins pt-5 px-4 sm:px-8 lg:px-0 ">
           <div id="home" className="w-full relative pt-20 lg:pt-28 py-10 ">
             <div className="mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8">
