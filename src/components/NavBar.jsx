@@ -17,6 +17,7 @@ import {
 import { BsTwitterX } from "react-icons/bs";
 import { PiDiscordLogo } from "react-icons/pi";
 import { HashLink } from "react-router-hash-link";
+import { Hash } from "lucide-react";
 
 const icon = [
   { icon: <BsTwitterX className="text-zinc-600" size={16} /> },
@@ -44,6 +45,7 @@ const icon = [
 
 const NavBar = () => {
   const location = useLocation();
+
   const [isOpen, setIsOpen] = useState(false);
   const [expandedMenu, setExpandedMenu] = useState(null);
 
@@ -197,7 +199,10 @@ const NavBar = () => {
             <nav className="flex-1 mt-6 grid gap-y-4 pt-4 ">
               {menuOptions.map((option) => (
                 <div key={option.path}>
-                  <div
+                  <HashLink
+                    smooth
+                    // to={option.submenu ? null : option.path}
+                    to={option.path}
                     onClick={() => handleMenuClick(option)}
                     className={`flex items-center justify-between rounded-md p-1 py-2 pb-3 px-2 text-sm font-semibold ${
                       option.path === location.pathname
@@ -208,6 +213,7 @@ const NavBar = () => {
                     <span className="ml-3 text-base font-normal">
                       {option.title}
                     </span>
+
                     {option.submenu ? (
                       <BiChevronDown
                         className={`h-4 w-4 transition-transform ${
@@ -217,18 +223,18 @@ const NavBar = () => {
                     ) : (
                       <BiChevronRight className="h-4 w-4" />
                     )}
-                  </div>
+                  </HashLink>
                   {option.submenu && expandedMenu === option.title && (
                     <div className="ml-6 mt-2 space-y-2">
                       {option.submenu.map((subItem) => (
-                        <Link
+                        <HashLink
                           key={subItem.path}
                           to={subItem.path}
                           onClick={() => setIsOpen(false)}
                           className="block p-2 text-sm text-gray-600 hover:primary/95 hover:bg-zinc-200 rounded-md"
                         >
                           {subItem.title}
-                        </Link>
+                        </HashLink>
                       ))}
                     </div>
                   )}
