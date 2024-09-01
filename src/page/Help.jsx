@@ -102,15 +102,18 @@ const Help = () => {
               <div className="flex flex-col justify-center text-center lg:text-left">
                 <div className="text-3xl sm:text-4xl font-semibold mb-4">
                   <H3 className="block text-3xl sm:text-4xl text-zinc-700">
-                    BITCOIN MINETRIX
+                    Bitcoin Minetrix
                   </H3>
-                  <span className="flex justify-center sm:justify-start text-zinc-700">
-                    STAKE TOKENS.
-                    <span className="block text-primary ml-1">
-                      MINE BITCOIN.
-                    </span>
+                  <span className="flex justify-center  text-zinc-700">
+                    Help and
+                    <span className="block text-primary ml-1">Support</span>
                   </span>
-                </div>
+                </div>{" "}
+                <P className="flex text-base sm:text-lg text-zinc-600 mb-6 text-balance">
+                  If you need further assistance or have specific queries
+                  related to our Bitcoin Minetrix presale, this section is here
+                  to provide the necessary guidance and support.
+                </P>
               </div>
             </div>
           </div>
